@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nevil Shah | Future Aspirations & Professional Development</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* 1. Base Styles (Consistent) */
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F9FAFB; /* background-light */
+            color: #1F2937; /* secondary-dark */
+            font-size: 1.125rem; /* text-lg equivalent for body */
+            line-height: 1.7; 
+        }
+
+        /* 2. Sticky Navbar Refinement (Consistent) */
+        #navbar.scrolled {
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.02);
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px); 
+        }
+
+        /* 3. Global Card Styling (Subtle hover lift - Consistent) */
+        .card-hover-effect {
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.03);
+        }
+        .card-hover-effect:hover {
+            transform: translateY(-4px); 
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-teal': '#0F766E', // Deep Teal
+                        'primary-accent': '#99F6E4', // Muted Mint
+                        'secondary-dark': '#1F2937', // Near-black
+                        'background-light': '#F9FAFB',
+                        // Future-specific accent colors
+                        'future-goal': '#059669', // Emerald
+                        'future-study': '#2563EB', // Indigo
+                        'future-strategy': '#F59E0B', // Amber
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="antialiased text-secondary-dark">
+
+     <!-- Navbar/Table of Contents (Consistent) -->
+    <nav id="navbar" class="sticky top-0 z-50 transition-all duration-300 bg-white/90">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="text-2xl font-extrabold text-primary-teal hover:text-secondary-dark transition duration-300">
+                    Nevil Shah | Portfolio
+                </a>
+                <div class="hidden sm:ml-6 sm:flex sm:space-x-4">
+                    <a href="index.html" class="text-base font-semibold text-secondary-dark hover:text-primary-teal p-3 rounded-lg transition duration-300">Introduction</a>
+                    <a href="resume.html" class="text-base font-semibold text-secondary-dark hover:text-primary-teal p-3 rounded-lg transition duration-300">Resume/CV</a>
+                    <a href="projects.html" class="text-base font-semibold text-secondary-dark hover:text-primary-teal p-3 rounded-lg transition duration-300">Projects</a>
+                    <a href="skills.html" class="text-base font-semibold text-secondary-dark hover:text-primary-teal p-3 rounded-lg transition duration-300">Skills</a>
+                    <a href="ethics.html" class="text-base font-semibold text-secondary-dark hover:text-primary-teal p-3 rounded-lg transition duration-300">Ethics & Teamwork</a>
+                    <a href="future.html" class="text-base font-semibold text-secondary-dark hover:text-primary-teal p-3 rounded-lg transition duration-300">Future & Growth</a>
+                    <a href="conclusion.html" class="text-base font-semibold text-secondary-dark hover:text-primary-teal p-3 rounded-lg transition duration-300">Conclusion</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+  <!-- Main -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="future" class="py-24">
+          
+          <!-- Section Heading: Consistent left-border marker style -->
+          <div class="border-l-4 border-primary-teal pl-4 mb-12">
+              <h2 class="text-4xl font-extrabold text-secondary-dark">
+                  <i data-lucide="trending-up" class="w-8 h-8 inline mr-3 text-primary-teal"></i>
+                  Future Aspirations and Professional Development
+              </h2>
+          </div>
+
+          <p class="mb-12 text-lg text-gray-700 leading-relaxed max-w-4xl">
+              My career vision combines my technical foundation in Computer Science with my interest in business strategy, analytics, and data-driven innovation. I aim to grow as a professional who bridges technology and management to create impactful, scalable solutions for organizations and communities.
+          </p>
+
+          <!-- Future Goals Cards -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+              <!-- Career Goals Card -->
+              <div class="bg-white p-8 rounded-3xl shadow-xl card-hover-effect">
+                  <h3 class="text-2xl font-bold text-secondary-dark mb-4 flex items-center border-b border-primary-accent/50 pb-2">
+                      <i data-lucide="target" class="w-7 h-7 text-future-goal mr-3"></i>
+                      Career Goals
+                  </h3>
+                  <p class="text-lg text-gray-700">
+                      In the short term, my goal is to begin my professional journey as a <b>Junior Cloud Developer or Full-Stack Engineer</b>, applying my skills in AWS, React, and backend technologies. 
+                      In the long term, I aspire to evolve into a <b>Technology Leader</b>—developing AI-driven SaaS platforms that enhance productivity and decision-making in finance, logistics, and social impact sectors.
+                  </p>
+                  <p class="text-lg text-gray-700 mt-4 p-4 bg-background-light border-l-4 border-future-goal rounded-lg">
+                      To complement my technical career path, I also plan to pursue an <b>MBA in Business Analytics</b> from one of India’s top IIMs (<b>BLACKI – Bangalore, Lucknow, Ahmedabad, Calcutta, Kozhikode, Indore</b>). 
+                      This will help me integrate business strategy, leadership, and data analytics for managing technology-driven enterprises.
+                  </p>
+              </div>
+
+              <!-- Areas for Further Study Card -->
+              <div class="bg-white p-8 rounded-3xl shadow-xl card-hover-effect">
+                  <h3 class="text-2xl font-bold text-secondary-dark mb-4 flex items-center border-b border-primary-accent/50 pb-2">
+                      <i data-lucide="book-open" class="w-7 h-7 text-future-study mr-3"></i>
+                      Areas for Further Study
+                  </h3>
+                  <p class="text-lg text-gray-700">
+                      My focus areas for further study include:
+                  </p>
+                  <ul class="list-disc list-inside space-y-2 mt-4 text-lg text-gray-700 ml-4">
+                      <li><b>Advanced Cloud Architecture</b> – mastering scalable system design and multi-cloud integration.</li>
+                      <li><b>Business Analytics</b> – gaining expertise in predictive modeling, decision science, and data visualization to bridge technology and strategy.</li>
+                      <li><b>Leadership and Management</b> – understanding organizational behavior, business communication, and innovation management as part of MBA training.</li>
+                      <li><b>AI in Business</b> – exploring how artificial intelligence transforms finance, supply chain, and marketing analytics.</li>
+                  </ul>
+              </div>
+
+              <!-- Continuous Improvement Card (Full Width) -->
+              <div class="bg-white p-8 rounded-3xl shadow-xl card-hover-effect md:col-span-2">
+                  <h3 class="text-2xl font-bold text-secondary-dark mb-4 flex items-center border-b border-primary-accent/50 pb-2">
+                      <i data-lucide="refresh-cw" class="w-7 h-7 text-future-strategy mr-3"></i>
+                      Strategies for Continuous Improvement
+                  </h3>
+                  <ul class="list-disc list-inside space-y-3 text-lg text-gray-700 ml-4">
+                      <li><b>Certifications:</b> Attain the <b>AWS Solutions Architect – Associate</b> certification to advance technical cloud proficiency.</li>
+                      <li><b>Skill Expansion:</b> Learn <b>Golang</b> or <b>Rust</b> to strengthen backend versatility and performance optimization.</li>
+                      <li><b>Professional Networking:</b> Engage in tech and analytics communities through <b>LinkedIn</b> and <b>open-source contributions</b> to exchange knowledge and stay industry-relevant.</li>
+                      <li><b>Academic Preparation:</b> Prepare strategically for the <b>CAT exam</b> to qualify for admission into top IIMs, focusing on quantitative aptitude, reasoning, and business awareness.</li>
+                      <li><b>Personal Growth:</b> Continue reflective learning through project retrospectives and mentorship to sustain motivation and adaptability in dynamic environments.</li>
+                  </ul>
+              </div>
+
+          </div>
+      </section>
+  </main>
+
+  <!-- Footer (Consistent) -->
+  <footer class="bg-secondary-dark text-white text-center py-10 mt-20">
+    <p class="text-base opacity-75">&copy; 2025 Nevil Shah. All Rights Reserved. Digital Portfolio.</p>
+  </footer>
+
+  <script>
+      lucide.createIcons();
+      const navbar = document.getElementById('navbar');
+      window.addEventListener('scroll', () => {
+          if (window.scrollY > 50) navbar.classList.add('scrolled');
+          else navbar.classList.remove('scrolled');
+      });
+  </script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nevil Shah | Advanced Skill Development and Mastery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* 1. Base Styles (Consistent) */
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F9FAFB; /* background-light */
+            color: #1F2937; /* secondary-dark */
+            font-size: 1.125rem; /* text-lg equivalent for body */
+            line-height: 1.7; 
+        }
+
+        /* 2. Custom Code Block Styling (Refined for new palette) */
+        pre {
+            background: #F0FDF4; /* Mint-50 */
+            border-left: 4px solid #0F766E; /* primary-teal */
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            font-size: 0.875rem; /* text-sm */
+            line-height: 1.5;
+            color: #0F766E; /* primary-teal */
+        }
+        /* Optional: Suggest a more technical font for code */
+        code { font-family: 'Fira Code', 'Roboto Mono', monospace; }
+
+        /* 3. Sticky Navbar Refinement (Consistent) */
+        #navbar.scrolled {
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.02);
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px); 
+        }
+
+        /* 4. Global Card Styling (Subtle hover lift - Consistent) */
+        .card-hover-effect {
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.03);
+        }
+        .card-hover-effect:hover {
+            transform: translateY(-4px); 
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-teal': '#0F766E', // Deep Teal
+                        'primary-accent': '#99F6E4', // Muted Mint
+                        'secondary-dark': '#1F2937', // Near-black
+                        'background-light': '#F9FAFB',
+                        // Skill-specific accent colors for card icons/text
+                        'skill-web': '#0F766E',   // Primary Teal
+                        'skill-data': '#3B82F6',  // Blue
+                        'skill-creative': '#EC4899', // Pink
+                        'skill-soft': '#F59E0B',  // Amber
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="antialiased text-secondary-dark">
+
+    <!-- Navbar (Consistent) -->
+    <nav id="navbar" class="sticky top-0 z-50 transition-all duration-300 bg-white/90">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="text-2xl font-extrabold text-primary-teal hover:text-secondary-dark transition duration-300">
+                    Nevil Shah | Portfolio
+                </a>
+                <div class="hidden sm:ml-6 sm:flex sm:space-x-4">
+                    <a href="index.html" class="text-base font-semibold text-secondary-dark hover:text-primary-teal p-3 rounded-lg transition duration-300">Introduction</a>
+                    <a href="resume.html" class="text-base font-semibold text-secondary-dark hover:text-primary-teal p-3 rounded-lg transition duration-300">Resume/CV</a>
+                    <a href="projects.html" class="text-base font-semibold text-secondary-dark hover:text-primary-teal p-3 rounded-lg transition duration-300">Projects</a>
+                    <a href="skills.html" class="text-base font-semibold text-secondary-dark hover:text-primary-teal p-3 rounded-lg transition duration-300">Skills</a>
+                    <a href="ethics.html" class="text-base font-semibold text-secondary-dark hover:text-primary-teal p-3 rounded-lg transition duration-300">Ethics & Teamwork</a>
+                    <a href="future.html" class="text-base font-semibold text-secondary-dark hover:text-primary-teal p-3 rounded-lg transition duration-300">Future & Growth</a>
+                    <a href="conclusion.html" class="text-base font-semibold text-secondary-dark hover:text-primary-teal p-3 rounded-lg transition duration-300">Conclusion</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="skills" class="py-24">
+            
+            <!-- Section Heading: Consistent left-border marker style -->
+            <div class="border-l-4 border-primary-teal pl-4 mb-12">
+                <h2 class="text-4xl font-extrabold text-secondary-dark">
+                    <i data-lucide="zap" class="w-8 h-8 inline mr-3 text-primary-teal"></i>
+                    Advanced Skill Development and Mastery
+                </h2>
+            </div>
+
+            <p class="mb-12 text-lg text-gray-700 leading-relaxed max-w-4xl">
+                This section highlights advanced technical, analytical, creative, and soft skills I have cultivated through project-based learning and collaboration. Artefacts, such as code snippets and project reports, provide tangible evidence of applied learning and innovation.
+            </p>
+
+            <!-- Skill Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+                <!-- Skill 1: Technical Proficiency (Full-Stack) -->
+                <div class="bg-white p-8 rounded-3xl shadow-xl card-hover-effect">
+                    <div class="flex items-center mb-4 border-b border-primary-accent/50 pb-2">
+                        <i data-lucide="globe" class="w-7 h-7 text-skill-web mr-3"></i>
+                        <h3 class="text-2xl font-bold text-secondary-dark">Full-Stack Web Development & API Integration</h3>
+                    </div>
+                    <p class="text-lg text-gray-700 mt-4"><strong>Mastery:</strong> Built and deployed a <b>Currency Tax Estimator</b> using <b>PHP, MySQL, and JavaScript (AJAX)</b>. Integrated REST APIs for exchange rate data and designed a secure admin panel for tax management.</p>
+                    <p class="text-lg text-gray-700 mt-4"><strong>Learning Outcome:</strong> Enhanced my understanding of <b>data flow between client and server</b>, backend modularization, and financial computation accuracy. Strengthened error handling and database normalization skills.</p>
+                    <p class="text-sm text-gray-500 mt-6 mb-2"><strong>Artefact (Code Snippet):</strong></p>
+                    <pre><code>// PHP Currency Conversion Logic
+$apiData = json_decode(file_get_contents('https://api.exchangerate.host/latest'), true);
+$rate = $apiData['rates'][$target_currency];
+$converted = $amount * $rate;
+$final_amount = number_format($converted - ($converted * $tax_rate / 100), 2);
+echo "Post-tax converted amount: $final_amount";</code></pre>
+                    <pre class="bg-primary-accent/30 border-primary-teal/50 text-secondary-dark/80 mt-4 text-sm">
+<a href="IWT Lab Project Report.pdf" class="font-semibold text-primary-teal hover:underline" target="_blank">
+View Currency Tax Estimator Project Report
+</a>
+[Detailed documentation of backend logic, API integration, and security measures.]
+                    </pre>
+                </div>
+
+                <!-- Skill 2: Analytical & Data Visualization Skills -->
+                <div class="bg-white p-8 rounded-3xl shadow-xl card-hover-effect">
+                    <div class="flex items-center mb-4 border-b border-primary-accent/50 pb-2">
+                        <i data-lucide="monitor" class="w-7 h-7 text-skill-data mr-3"></i>
+                        <h3 class="text-2xl font-bold text-secondary-dark">Data Visualization & Analytical Innovation</h3>
+                    </div>
+                    <p class="text-lg text-gray-700 mt-4"><strong>Mastery:</strong> Co-developed the NASA Space Apps project <b>“PACE in the Classroom”</b> using <b>ReactJS</b> and <b>NASA PACE satellite APIs</b> to visualize ocean color data for environmental learning.</p>
+                    <p class="text-lg text-gray-700 mt-4"><strong>Learning Outcome:</strong> Gained advanced proficiency in <b>API data handling, UI optimization</b>, and <b>asynchronous data fetching</b>. Developed the ability to translate scientific data into intuitive visual formats for education.</p>
+                    <p class="text-sm text-gray-500 mt-6 mb-2"><strong>Artefact (React Code Snippet):</strong></p>
+                    <pre><code>// React API Fetch Example for NASA PACE Visualization
+useEffect(() => {
+  fetch("https://oceandata.sci.gsfc.nasa.gov/api")
+    .then(res => res.json())
+    .then(data => setOceanData(data))
+    .catch(err => console.error("Error loading NASA data:", err));
+}, []);</code></pre>
+                    <pre class="bg-primary-accent/30 border-primary-teal/50 text-secondary-dark/80 mt-4 text-sm">
+<a href="NASA Space Apps.pdf" class="font-semibold text-primary-teal hover:underline" target="_blank">
+View NASA Space Apps Project Report
+</a>
+[Showcases API usage, visualization model, and adaptive learning techniques.]
+                    </pre>
+                </div>
+
+                <!-- Skill 3: Creative Competency (System Design) -->
+                <div class="bg-white p-8 rounded-3xl shadow-xl card-hover-effect">
+                    <div class="flex items-center mb-4 border-b border-primary-accent/50 pb-2">
+                        <i data-lucide="music" class="w-7 h-7 text-skill-creative mr-3"></i>
+                        <h3 class="text-2xl font-bold text-secondary-dark">Creative Design & System Optimization</h3>
+                    </div>
+                    <p class="text-lg text-gray-700 mt-4"><strong>Mastery:</strong> Developed a <b>Music Streaming Platform</b> with a hybrid recommendation system and a 24-hour Redis caching model to enhance user personalization and performance.</p>
+                    <p class="text-lg text-gray-700 mt-4"><strong>Learning Outcome:</strong> Learned to balance <b>backend efficiency with user-centered design</b>. This project deepened my knowledge of <b>system scaling, cache optimization, and collaborative filtering techniques</b>.</p>
+                    <p class="text-sm text-gray-500 mt-6 mb-2"><strong>Artefact (Backend Code Snippet):</strong></p>
+                    <pre><code>// Node.js Redis Cache for “Daily Mix”
+app.get("/daily-mix/:userId", async (req, res) => {
+  const cachedMix = await redisClient.get(`mix:${req.params.userId}`);
+  if (cachedMix) return res.json(JSON.parse(cachedMix));
+
+  const songs = await db.query("SELECT * FROM recommendations WHERE user_id=?", [req.params.userId]);
+  await redisClient.setEx(`mix:${req.params.userId}`, 86400, JSON.stringify(songs)); // cache for 24 hrs
+  res.json(songs);
+});</code></pre>
+                    <pre class="bg-primary-accent/30 border-primary-teal/50 text-secondary-dark/80 mt-4 text-sm">
+<a href="https://github.com/dhritisojitra/Music-Website/blob/main/README.md" class="font-semibold text-primary-teal hover:underline" target="_blank">
+View Music Website System Architecture
+</a>
+[Explains cloud caching, performance tuning, and UX strategy.]
+                    </pre>
+                </div>
+
+                <!-- Skill 4: Soft Skills (Leadership) -->
+                <div class="bg-white p-8 rounded-3xl shadow-xl card-hover-effect">
+                    <div class="flex items-center mb-4 border-b border-primary-accent/50 pb-2">
+                        <i data-lucide="users" class="w-7 h-7 text-skill-soft mr-3"></i>
+                        <h3 class="text-2xl font-bold text-secondary-dark">Leadership, Collaboration & Communication</h3>
+                    </div>
+                    <p class="text-lg text-gray-700 mt-4"><strong>Mastery:</strong> Strengthened communication, planning, and problem-resolution skills while leading a four-member team in interdisciplinary research and development projects.</p>
+                    <p class="text-lg text-gray-700 mt-4"><strong>Learning Outcome:</strong> Developed confidence in <b>delegation, conflict management, and mentoring peers</b>. Enhanced my ability to articulate technical ideas effectively to non-technical audiences.</p>
+                    <div class="p-4 bg-background-light border-l-4 border-skill-soft mt-6 rounded-lg">
+                        <p class="text-lg font-semibold text-secondary-dark">Mentorship & Peer Review</p>
+                        <p class="text-base text-gray-700">Actively participated in university coding clubs, providing technical guidance to junior students and improving project documentation standards.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Consistent) -->
+    <footer class="bg-secondary-dark text-white text-center py-10 mt-20">
+        <p class="text-base opacity-75">&copy; 2025 Nevil Shah. All Rights Reserved. Digital Portfolio.</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) navbar.classList.add('scrolled');
+            else navbar.classList.remove('scrolled');
+        });
+    </script>
+</body>
+</html>

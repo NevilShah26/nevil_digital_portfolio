@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nevil Shah | Computer Science Portfolio</title>
+  <!-- Optional: Use a modern font pairing -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    /* 1. Base Styles & Scroll Behavior */
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      /* Using a very soft off-white background */
+      background-color: #F9FAFB;
+      color: #1F2937;
+      /* Set a base text size for better readability */
+      font-size: 1.125rem; /* text-lg equivalent */
+      line-height: 1.7; /* leading-relaxed equivalent */
+    }
+
+    /* 2. Sticky Navbar Refinement */
+    #navbar.scrolled {
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.02);
+      background-color: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(12px); /* Slightly stronger blur */
+    }
+
+    /* 3. Global Card Styling (Subtle hover lift - for elements like projects/skills) */
+    .card-hover-effect {
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.03);
+    }
+    .card-hover-effect:hover {
+        /* Subtle lift and a slightly stronger shadow */
+        transform: translateY(-2px); 
+        box-shadow: 0 4px 6px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.04);
+    }
+  </style>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            // New Professional Palette: Deep Teal and Muted Mint
+            'primary-teal': '#0F766E', // A deep, professional teal/cyan
+            'primary-accent': '#99F6E4', // A muted, elegant mint/teal for highlights
+            'secondary-dark': '#1F2937', // Near-black for text/footer
+            'background-light': '#F9FAFB',
+          },
+        }
+      }
+    }
+  </script>
+</head>
+<body class="antialiased text-secondary-dark">
+
+  <!-- ✅ Navbar (Consistent) -->
+  <nav id="navbar" class="sticky top-0 z-50 transition-all duration-300 bg-white/90">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <!-- Brand/Name: Now using deep teal and refined hover -->
+        <a href="index.html" class="text-2xl font-extrabold text-primary-teal hover:text-secondary-dark transition duration-300">
+          Nevil Shah | Portfolio
+        </a>
+        <div class="hidden sm:ml-6 sm:flex sm:space-x-4">
+          <!-- Navigation Links: Consistent styling -->
+          <a href="index.html" class="text-base font-semibold text-secondary-dark hover:text-primary-teal p-3 rounded-lg transition duration-300">Introduction</a>
+          <a href="resume.html" class="text-base font-semibold text-secondary-dark hover:text-primary-teal p-3 rounded-lg transition duration-300">Resume/CV</a>
+          <a href="projects.html" class="text-base font-semibold text-secondary-dark hover:text-primary-teal p-3 rounded-lg transition duration-300">Projects</a>
+          <a href="skills.html" class="text-base font-semibold text-secondary-dark hover:text-primary-teal p-3 rounded-lg transition duration-300">Skills</a>
+          <a href="ethics.html" class="text-base font-semibold text-secondary-dark hover:text-primary-teal p-3 rounded-lg transition duration-300">Ethics & Teamwork</a>
+          <a href="future.html" class="text-base font-semibold text-secondary-dark hover:text-primary-teal p-3 rounded-lg transition duration-300">Future & Growth</a>
+          <a href="conclusion.html" class="text-base font-semibold text-secondary-dark hover:text-primary-teal p-3 rounded-lg transition duration-300">Conclusion</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content: Using consistent, generous spacing (py-24) -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- 1️⃣ Cover / Hero Section: UPDATED GRADIENT BACKGROUND -->
+    <section id="cover" class="pt-20 pb-24 text-center bg-gradient-to-b from-primary-accent/10 to-white rounded-2xl shadow-xl transition duration-300 my-12">
+      <div class="flex flex-col items-center">
+        <!-- Image: Refined border color/thickness -->
+        <div class="w-36 h-36 rounded-full overflow-hidden mb-6 border-6 border-primary-teal shadow-2xl ring-4 ring-primary-accent/50">
+          <!-- Placeholder for image source -->
+          <img src="portfolio_pfp.jpg" alt="Professional Photograph" class="w-full h-full object-cover" /> 
+        </div>
+
+        <!-- H1: Larger, sharper weight for impact -->
+        <h1 class="text-6xl sm:text-7xl font-extrabold text-secondary-dark mb-3 tracking-tight">Nevil Shah</h1>
+        <!-- Subtitle: Lighter weight, professional gray -->
+        <p class="text-xl text-gray-500 mb-6 font-light">B.Tech in Computer Science & Engineering — Pandit Deendayal Energy University</p>
+        <!-- Tagline: Distinct color and lighter weight -->
+        <p class="text-2xl font-light italic text-primary-teal max-w-3xl mx-auto">
+          Aspiring Software Engineer | Problem Solver | Innovator
+        </p>
+      </div>
+    </section>
+
+    <!-- 2️⃣ Introduction & Learning Philosophy: Consistent vertical rhythm (py-24) -->
+    <section id="intro" class="py-24">
+      <!-- Section Heading: Replaced heavy border with a modern left-border marker -->
+      <div class="border-l-4 border-primary-teal pl-4 mb-10">
+        <h2 class="text-4xl font-extrabold text-secondary-dark">
+          <i data-lucide="brain-circuit" class="w-8 h-8 inline mr-3 text-primary-teal"></i>
+          Introduction and Learning Philosophy
+        </h2>
+      </div>
+
+      <!-- Intro Card: Subtle shadow, card-hover-effect class for micro-interaction -->
+      <div class="bg-white p-12 rounded-3xl card-hover-effect space-y-8 shadow-lg">
+          
+        <p class="text-xl font-semibold text-primary-teal leading-normal">
+          Passionate Computer Science Student Dedicated to Innovation, Ethics, and Impact
+        </p>
+
+        <!-- Body Text: Using explicit Tailwind classes for text control -->
+        <p class="text-lg text-gray-700 leading-relaxed">
+          As a forward-thinking Computer Science student at <b class="font-semibold text-primary-teal">Pandit Deendayal Energy University</b>, I believe that technology is most powerful when it creates meaningful change.
+          My journey blends technical rigor with empathy-driven innovation, where each project becomes an opportunity to solve real-world problems and contribute responsibly to society.
+        </p>
+
+        <p class="text-lg text-gray-700 leading-relaxed">
+          I adopt a <b class="font-semibold">hands-on, project-based learning approach</b> — translating theory into practice through experimentation and collaboration.
+          From building a <b>Currency Tax Estimator</b> that simplifies financial transparency, to developing an award-winning <b>NASA Space Apps project</b> that fosters environmental awareness, and creating a <b>Music Streaming Platform</b> powered by AI-driven personalization, every project has reinforced my belief that technology must be both <b class="font-semibold">functional and ethical</b>.
+        </p>
+
+        <p class="text-lg text-gray-700 leading-relaxed">
+          My core principles — <b>integrity, inclusivity, and curiosity</b> — shape how I learn and build.
+          I aim to design digital systems that are <b class="font-semibold">technically robust, user-centric, and globally responsible</b>.
+          Working across cloud computing, data visualization, and software design has strengthened my problem-solving mindset while deepening my understanding of sustainability and digital ethics.
+        </p>
+
+        <p class="text-lg text-gray-700 leading-relaxed">
+          This portfolio represents more than my academic journey — it’s a reflection of my growth as a responsible technologist.
+          It encapsulates my evolution from learner to innovator, guided by the vision of using technology to <b>bridge inequalities, empower communities,</b> and advance global well-being.
+        </p>
+
+        <p class="text-lg text-gray-700 leading-relaxed">
+          My ultimate goal is to become a <b>versatile and ethical software engineer</b> — one who leads with purpose, collaborates with empathy, and continually adapts to create lasting impact in the evolving digital world.
+        </p>
+
+        <!-- Contact Card: Refined to be professional and high-contrast -->
+        <div class="mt-10 p-6 bg-primary-teal text-white rounded-xl shadow-xl transition-all duration-300">
+          <p class="text-xl font-bold mb-2 flex items-center">
+            <i data-lucide="mail" class="w-5 h-5 inline mr-3 text-primary-accent"></i>
+            Connect with Nevil Shah
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-y-2 text-lg">
+            <p class="flex items-center"><i data-lucide="map-pin" class="w-4 h-4 mr-2 text-primary-accent"></i> Ahmedabad, Gujarat</p>
+            <p class="flex items-center"><i data-lucide="phone" class="w-4 h-4 mr-2 text-primary-accent"></i> 6355856418</p>
+            <p class="flex items-center"><i data-lucide="send" class="w-4 h-4 mr-2 text-primary-accent"></i> nevilshah2526@gmail.com</p>
+          </div>
+          <p class="mt-4 text-lg">
+            <span class="font-semibold">Digital Presence:</span> 
+            <a href="https://www.linkedin.com/in/nevil-shah-753a32398/" target="_blank" class="hover:text-primary-accent underline ml-3 font-medium transition duration-300">LinkedIn</a> 
+            <span class="mx-2">|</span>
+            <a href="https://github.com/NevilShah26" target="_blank" class="hover:text-primary-accent underline font-medium transition duration-300">GitHub</a>
+          </p>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- Footer: Increased padding for better separation -->
+  <footer class="bg-secondary-dark text-white text-center py-10 mt-20">
+    <p class="text-base opacity-75">&copy; 2025 Nevil Shah. All Rights Reserved. Digital Portfolio.</p>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
+</body>
+</html>
